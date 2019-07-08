@@ -1,0 +1,1 @@
+{"index.js":"function randomFraction() {\n\n  // Only change code below this line.\n  for (var i = 0; i < 10; i++){\n    return Math.random();\n  }\n  //return 0;\n\n  // Only change code above this line.\n}"}
