@@ -25,3 +25,20 @@ You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is rec
 You can build your project by forking this CodePen pen. Or you can use this CDN link to run the tests in any environment you like: https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js.
 Once you're done, submit the URL to your working project with all its tests passing.
 Remember to use the Read-Search-Ask method if you get stuck.
+
+
+## License
+
+Copyright [2019] [XiaoQian Huang]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
