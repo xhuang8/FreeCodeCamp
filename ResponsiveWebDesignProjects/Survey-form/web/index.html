@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" />
 </head>
-<body>
 
+
+<body>
+<!--set the title and paragraph-->
+<h1 id="title">Survey Form</h1>
+<div id="form-outer">
+<p id="description">Weather Survey of San Francisco</p>
+
+<!--form setting-->
+<form id="survey-form" method="get">
+    <!--name setting-->
+    <div class="form-group">
+        <label id="name-label" for="name">*Name: </label>
+        <input id="name" type="text" required placeholder="Enter your name">
+        <span class="validate"></span>
+    </div>
+    <!--email setting-->
+    <div class="form-group">
+        <label id="email-label" for="email">*Email: </label>
+        <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required placeholder="Enter your email">
+        <span class="validate"></span>
+    </div>
+    <!--age number setting-->
+    <div class="form-group">
+        <label id="number-label" for="number">*Age: </label>
+        <input id="number" type="number" min="2" max="100" step="1" required placeholder="Enter your age">
+        <span class="validate"></span>
+    </div>
+</form>
+</div>
 </body>
 </html>
