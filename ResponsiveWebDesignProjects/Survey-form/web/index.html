@@ -33,6 +33,37 @@
         <input id="number" type="number" min="2" max="100" step="1" required placeholder="Enter your age">
         <span class="validate"></span>
     </div>
+
+    <!--current role setting-->
+    <div class="form-group">
+        <label id="role-label" for="dropdown">What is your current role: </label>
+        <!--select for the drop menu-->
+        <select id="dropdown" name="current-role">
+        <!--option for the role-->
+        <option value="" disabled selected>Select an option</option>
+        <option value="student">Student</option>
+        <option value="worker">Worker</option>
+        <option value="teacher">Teacher</option>
+        <option value="young">Young</option>
+        <option value="older">Older</option>
+        <option value="other">Other</option>
+        </select>
+    </div>
+
+    <!--this is for radio button for recommending to the friends option-->
+    <div class="form-group">
+        <P>Would you want to recommend your friends to live in SF with this weather?</P>
+        <div class="input-group">
+            <label for="yes"><input id="yes" type="radio" name="user-rating" value="yes" checked>YES</label>
+            <label for="no"><input id="no" type="radio" name="user-rating" value="no">NO</label>
+            <label for="unsure"><input id="unsure" type="radio" name="user-rating" value="notsure">NOT SURE</label>
+        </div>
+    </div>
+
+    <!--option for why do you like the weather-->
+    <div class="form-group">
+        
+    </div>
 </form>
 </div>
 </body>
