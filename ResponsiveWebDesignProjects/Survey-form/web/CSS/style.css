@@ -4,22 +4,35 @@ html{
 }
 
 /*body setting*/
+html,
 body{
     background-color: honeydew;
-    text-align: center;
     font-family: "DejaVu Serif", sans-serif;
+    text-align: center;
     font-size: 1em;
+    min-width: 320px;
 }
 
 /*h1 setting*/
 h1{
     font-family: 'DejaVu Sans Mono', monospace;
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 /*paragraph setting*/
 p{
+    font-family: "Source Code Pro", sans-serif;
     scroll-snap-margin-block-end: 0.8em;
+}
+
+/*form-outer*/
+#form-outer{
+    background-color: honeydew;
+    margin: 0 auto;
+    border-radius: 4px;
+    width: 75%;
+    max-width: 900px;
 }
 
 /*title and description setting*/
@@ -39,10 +52,10 @@ form{
 
 /*form-group setting*/
 .form-group{
-    display: grid;
     grid-template-columns: 100%;
     align-items: center;
     margin-bottom: 15px;
+    vertical-align: top;
 }
 
 /*setting for input text, email, number, and textarea, select*/
@@ -51,7 +64,29 @@ input[type=email],
 input[type=number],
 textarea,
 select{
-    padding: 8px 5px;
+    height: 20px;
+    width: 280px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+
+/*leftTab and rightTab*/
+.leftTab{
+    display: inline-block;
+    text-align: right;
+    width: 30%;
+    padding: 5px;
+    vertical-align:text-after-edge;
+    margin-top: 10px;
+}
+
+.rightTab{
+    display: inline-block;
+    text-align: left;
+    width: 60%;
+    vertical-align: middle;
 }
 
 /*label setting for input-group*/
@@ -64,4 +99,30 @@ select{
 }
 
 /*input setting for input-group*/
-.input-group input
+.input-group input{
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -3px;
+    *overflow: hidden;
+    text-align: left;
+}
+
+/*button setting*/
+button{
+    background-color: green;
+    color: aquamarine;
+    cursor: pointer;
+    border-width: 0px 0px 3px 0px;
+    border-radius: 5px;
+    font-family: "Source Code Pro", sans-serif;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+button:hover{
+    background-color: honeydew;
+}
