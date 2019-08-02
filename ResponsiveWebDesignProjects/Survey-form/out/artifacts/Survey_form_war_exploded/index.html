@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+</head>
+
+
+<body>
+
+<!--set the title and paragraph-->
+<h1 id="title">Survey Form</h1>
+<div id="form-outer">
+<p id="description">Weather Survey of San Francisco</p>
+
+<!--form setting-->
+<form id="survey-form" method="get">
+
+    <!--name setting-->
+    <div class="form-group">
+
+        <div class="leftTab">
+            <label id="name-label" for="name">*Name: </label>
+        </div>
+
+        <div class="rightTab">
+            <input autofocus id="name" type="text" required placeholder="Enter your name">
+        </div>
+
+        <span class="validate"></span>
+    </div>
+
+    <!--email setting-->
+    <div class="form-group">
+
+        <div class="leftTab">
+            <label id="email-label" for="email">*Email: </label>
+        </div>
+
+        <div class="rightTab">
+            <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required placeholder="Enter your email">
+        </div>
+
+        <span class="validate"></span>
+    </div>
+
+    <!--age number setting-->
+    <div class="form-group">
+
+        <div class="leftTab">
+            <label id="number-label" for="number">*Age: </label>
+        </div>
+
+        <div class="rightTab">
+            <input id="number" type="number" min="2" max="100" step="1" required placeholder="Enter your age">
+        </div>
+
+        <span class="validate"></span>
+    </div>
+
+    <!--current role setting-->
+    <div class="form-group">
+
+        <div class="leftTab">
+            <label id="role-label" for="dropdown">What is your current role: </label>
+        </div>
+
+        <!--select for the drop menu-->
+        <div class="rightTab">
+            <select id="dropdown" name="current-role">
+        <!--option for the role-->
+                <option value="" disabled selected>Select an option</option>
+                <option value="student">Student</option>
+                <option value="worker">Worker</option>
+                <option value="teacher">Teacher</option>
+                <option value="young">Young</option>
+                <option value="older">Older</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+    </div>
+
+    <!--this is for radio button for recommending to the friends option-->
+    <div class="form-group">
+
+        <div class="leftTab">
+            <label>*Would you want to recommend your friends to live in SF with this weather?</label>
+        </div>
+
+        <div class="rightTab">
+            <ul style="list-style: none;">
+                <li class="radio"><label><input id="yes" class="ratings" type="radio" name="user-rating" value="yes" checked>YES</label></li>
+                <li class="radio"><label><input id="no" class="ratings" type="radio" name="user-rating" value="no">NO</label></li>
+                <li class="radio"><label><input id="unsure" class="ratings" type="radio" name="user-rating" value="notsure">NOT SURE</label></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!--option for why do you like the weather-->
+    <div class="form-group">
+
+        <div class="leftTab">
+            <label id="reason-label" for="dropdown">Why do you like SF weather: </label>
+        </div>
+
+        <div class="rightTab">
+            <select id="reason-dropdown" name="reason">
+                <option value="" disabled selected>Select an option</option>
+                <option value="comfortable">Comfortable</option>
+                <option value="acceptable">Acceptable</option>
+                <option value="too-cold">Too cold</option>
+                <option value="too-warm">Too warm</option>
+                <option value="just-so-so">Just so so</option>
+                <option value="other-reason">Other reason</option>
+            </select>
+        </div>
+
+    </div>
+
+    <!--improve in the future-->
+    <div class="form-group">
+
+        <div class="leftTab">
+            <label>Things that should be improved in the future<br>(Check all that apply)</label>
+        </div>
+
+        <div class="rightTab">
+            <ul id="proves" style="list-style: none;">
+                <li class="checkbox"><label><input type="checkbox" class="ratings" name="improvements" value="tools">Provide more windshield tool </label></li>
+                <li class="checkbox"><label><input type="checkbox" class="ratings" name="improvements" value="information">Advance notice of air changes</label></li>
+                <li class="checkbox"><label><input type="checkbox" class="ratings" name="improvements" value="quality">Improve SF weather quality</label></li>
+                <li class="checkbox"><label><input type="checkbox" class="ratings" name="improvements" value="knowledge">Learn SF weather knowledge</label></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!--comments area-->
+    <div class="form-group">
+
+        <div class="leftTab">
+            <label id="textarea-label" for="comments">Any Comments or Suggestions?</label>
+        </div>
+
+        <div class="rightTab">
+            <textarea id="comments" placeholder="Enter your comments here ..."></textarea>
+        </div>
+
+    </div>
+
+    <!--submit button-->
+    <div class="form-group">
+        <button id="submit" type="submit">Submit</button>
+    </div>
+</form>
+
+</div>
+</body>
+</html>
