@@ -6,9 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c50d5a4c-37dc-44f3-8bfa-9c4f262b4bff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/web/JS/tribute-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/JS/tribute-page.js" afterDir="false" />
-    </list>
+    <list default="true" id="c50d5a4c-37dc-44f3-8bfa-9c4f262b4bff" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +18,7 @@
     <session id="-1731282035">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.opened" value="2" />
@@ -73,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/web/JS/tribute-page.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -362,12 +360,12 @@
       <option name="presentableId" value="Default" />
       <updated>1564096566397</updated>
       <workItem from="1564096568021" duration="14026000" />
-      <workItem from="1564125274182" duration="29000" />
+      <workItem from="1564125274182" duration="84000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14055000" />
+    <option name="totallyTimeSpent" value="14110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="96" y="59" width="1344" height="778" extended-state="0" />
@@ -433,7 +431,7 @@
     <entry file="file://$PROJECT_DIR$/web/JS/tribute-page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
