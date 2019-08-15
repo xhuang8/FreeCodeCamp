@@ -50,7 +50,7 @@
         <header>Selections</header>
         <article>
             <p>
-                Modifying documents using the W3C DOM API is tedious: the method names are verbose,
+                Modifying documents using the <a href="https://www.w3.org/DOM/DOMTR">W3C DOM API</a> is tedious: the method names are verbose,
                 and the imperative approach requires manual iteration and bookkeeping of temporary state.
                 For example, to change the text color of paragraph elements:
             </p>
@@ -75,7 +75,7 @@
                 d3.select("body").style("background-color", "black");
             </p>
             <p>
-                Selectors are defined by the W3C Selectors API and supported natively by modern browsers.
+                Selectors are defined by the <a href="https://www.w3.org/TR/selectors-api/">W3C Selectors API</a> and supported natively by modern browsers.
                 The above examples select nodes by tag name ("p" and "body", respectively).
                 Elements may be selected using a variety of predicates, including containment, attribute values, class and ID.
             </p>
@@ -93,12 +93,13 @@
         <header>Dynamic Properties</header>
         <article>
             <p>
-                Readers familiar with other DOM frameworks such as jQuery should immediately recognize similarities with D3.
+                Readers familiar with other DOM frameworks such as <a href="https://jquery.com/">jQuery</a> should immediately recognize similarities with D3.
                 Yet styles, attributes, and other properties can be specified as functions of data in D3, not just simple constants.
                 Despite their apparent simplicity, these functions can be surprisingly powerful;
-                the d3.geoPath function, for example, projects geographic coordinates into SVG path data.
+                the <a href="https://github.com/d3/d3-geo/blob/master/README.md#geoPath">d3.geoPath</a> function, for example, <a href="https://tools.ietf.org/html/rfc7946">projects geographic</a>
+                coordinates into SVG <a href="https://www.w3.org/TR/SVG/paths.html#PathData">path data</a>.
                 D3 provides many built-in reusable functions and function factories,
-                such as graphical primitives for area, line and pie charts.
+                such as <a href="https://github.com/d3/d3-shape">graphical primitives</a> for area, line and pie charts.
             </p>
             <p>
                 For example, to randomly color paragraphs:
@@ -208,7 +209,8 @@
         <article>
             <p>
                 D3 does not introduce a new visual representation.
-                Unlike Processing or Protovis, D3’s vocabulary of graphical marks comes directly from web standards:
+                Unlike <a href="https://processing.org/">Processing</a> or <a href="https://mbostock.github.io/protovis/">Protovis</a>,
+                D3’s vocabulary of graphical marks comes directly from web standards:
                 HTML, SVG, and CSS.
                 For example, you can create SVG elements using D3 and style them with external stylesheets.
                 You can use composite filter effects, dashed strokes and clipping.
