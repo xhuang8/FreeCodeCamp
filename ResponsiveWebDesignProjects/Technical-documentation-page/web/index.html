@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" />
 </head>
 
 
 <body>
 
 <!--nav bar for listings-->
-<nav id="navbar">
+<nav id="nav-bar">
     <header>D3 Documentation</header>
     <ul>
         <li><a class="nav-link" href="#Introduction">Introduction</a></li>
@@ -53,7 +54,7 @@
                 and the imperative approach requires manual iteration and bookkeeping of temporary state.
                 For example, to change the text color of paragraph elements:
             </p>
-            <p>
+            <p class="code">
                 var paragraphs = document.getElementsByTagName("p");<br>
                 for (var i = 0; i < paragraphs.length; i++) {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;var paragraph = paragraphs.item(i);<br>
@@ -64,13 +65,13 @@
                 D3 employs a declarative approach, operating on arbitrary sets of nodes called selections.
                 For example, you can rewrite the above loop as:
             </p>
-            <p>
+            <p class="code">
                 d3.selectAll("p").style("color", "blue");
             </p>
             <p>
                 Yet, you can still manipulate individual nodes as needed:
             </p>
-            <p>
+            <p class="code">
                 d3.select("body").style("background-color", "black");
             </p>
             <p>
@@ -102,7 +103,7 @@
             <p>
                 For example, to randomly color paragraphs:
             </p>
-            <p>
+            <p class="code">
                 d3.selectAll("p").style("color", function() {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;return "hsl(" + Math.random() * 360 + ",100%,50%)";<br>
                 });
@@ -110,7 +111,7 @@
             <P>
                 To alternate shades of gray for even and odd nodes:
             </P>
-            <p>
+            <p class="code">
                 d3.selectAll("p").style("color", function(d, i) {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;return i % 2 ? "#fff" : "#eee";<br>
                 });
@@ -123,10 +124,10 @@
                 For example, if you bind an array of numbers to paragraph elements,
                 you can use these numbers to compute dynamic font sizes:
             </p>
-            <p>
+            <p class="code">
                 d3.selectAll("p")<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;.data([4, 8, 15, 16, 23, 42])
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.style("font-size", function(d) { return d + "px"; });
+                &nbsp;&nbsp;&nbsp;&nbsp;.data([4, 8, 15, 16, 23, 42])<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.style("font-size", function(d) { return d + "px"; });
             </p>
             <p>
                 Once the data has been bound to the document, you can omit the data operator;
@@ -149,9 +150,12 @@
                 If there are fewer nodes than data, the extra data elements form the enter selection,
                 which you can instantiate by appending to the enter selection. For example:
             </p>
-            <p>
-                d3.select("body")<br>&nbsp;&nbsp;&nbsp;&nbsp;.selectAll("p")<br>&nbsp;&nbsp;&nbsp;&nbsp;.data([4, 8, 15, 16, 23, 42])
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;.enter().append("p")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.text(function(d) { return "I’m number " + d + "!"; });
+            <p class="code">
+                d3.select("body")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;.selectAll("p")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;.data([4, 8, 15, 16, 23, 42])<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;.enter().append("p")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.text(function(d) { return "I’m number " + d + "!"; });
             </p>
             <p>
                 Updating nodes are the default selection—the result of the data operator.
@@ -163,23 +167,23 @@
             <p class="sets">
                 // Update…
             </p>
-            <p>
-                var p = d3.select("body")<br>&nbsp;&nbsp;&nbsp;&nbsp;
-                .selectAll("p")<br>&nbsp;&nbsp;&nbsp;&nbsp;
-                .data([4, 8, 15, 16, 23, 42])<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                .text(function(d) { return d; });
+            <p class="code">
+                var p = d3.select("body")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;.selectAll("p")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;.data([4, 8, 15, 16, 23, 42])<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.text(function(d) { return d; });
             </p>
             <p class="sets">
                 // Enter…
             </p>
-            <p>
-                p.enter().append("p")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                .text(function(d) { return d; });
+            <p class="code">
+                p.enter().append("p")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.text(function(d) { return d; });
             </p>
             <p class="sets">
                 // Exit…
             </p>
-            <p>
+            <p class="code">
                 p.exit().remove();
             </p>
             <p>
@@ -236,18 +240,18 @@
             <p>
                 For example, to fade the background of the page to black:
             </p>
-            <p>
-                d3.select("body").transition()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                .style("background-color", "black");
+            <p class="code">
+                d3.select("body").transition()<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.style("background-color", "black");
             </p>
             <p>
                 Or, to resize circles in a symbol map with a staggered delay:
             </p>
-            <p>
-                d3.selectAll("circle").transition()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                .duration(750)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                .delay(function(d, i) { return i * 10; })<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                .attr("r", function(d) { return Math.sqrt(d * scale); });
+            <p class="code">
+                d3.selectAll("circle").transition()<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.duration(750)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.delay(function(d, i) { return i * 10; })<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.attr("r", function(d) { return Math.sqrt(d * scale); });
             </p>
             <p>
                 By modifying only the attributes that actually change,
