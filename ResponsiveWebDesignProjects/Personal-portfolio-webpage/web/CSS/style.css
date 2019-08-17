@@ -1,0 +1,57 @@
+/*basic styles*/
+body{
+    font-family: 'DejaVu Sans Mono', monospace;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: white;
+}
+
+/*h1 & h2*/
+h1{
+    font-size: 22px;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2{
+    font-size: 14px;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+/*ul listing */
+ul{
+    list-style: none;
+}
+
+/*a link*/
+a{
+    text-decoration: none;
+    color: white;
+}
+
+img{
+    display: block;
+    width: 30%;
+}
+
+/*nav style*/
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: orange;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.nav-list{
+    display: flex;
+    margin-right: 2rem;
+}
