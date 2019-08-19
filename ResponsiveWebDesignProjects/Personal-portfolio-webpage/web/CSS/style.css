@@ -1,22 +1,76 @@
+/*
+custom properties variables
+<html> in the case of HTML
+:root can be useful for declaring global CSS variables:
+*/
+:root{
+    --main-white: white;
+    --main-red: darkred;
+    --main-blue: darkslateblue;
+    --main-gray: darkgray;
+}
+
+/*some basic settings*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/*
+device
+breakpoints for em
+*/
+
+@media(max-width: 75em){
+    html{
+        font-size: 60%;
+    }
+}
+
+@media(max-width: 61.25em){
+    html{
+        font-size: 58%;
+    }
+}
+
+@media(max-width: 28.75em){
+    html{
+        font-size: 55%;
+    }
+}
+
 /*basic styles*/
 body{
     font-family: 'DejaVu Sans Mono', monospace;
     font-size: 18px;
-    font-weight: 300;
-    line-height: 1.5;
-    color: white;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
 }
 
 /*h1 & h2*/
 h1{
-    font-size: 22px;
+    font-size: 6rem;/*rem units*/
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     font-weight: 700;
     text-align: center;
 }
 
 h2{
-    font-size: 14px;
+    font-size: 4.2rem;
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     font-weight: 700;
     text-align: center;
@@ -30,7 +84,7 @@ ul{
 /*a link*/
 a{
     text-decoration: none;
-    color: white;
+    color: var(--main-white);
 }
 
 img{
@@ -46,14 +100,25 @@ img{
     top: 0;
     left: 0;
     width: 100%;
-    background: orange;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    background: var(--main-red);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
 }
 
 .nav-list{
     display: flex;
     margin-right: 2rem;
+}
+
+/*device nav*/
+@media(max-width: 28.75em){
+    .nav{
+        justify-content: center;
+    }
+
+    .nav-list{
+        margin: 0 1rem;
+    }
 }
 
 .nav-list a{
@@ -63,7 +128,7 @@ img{
 }
 
 .nav-list a:hover{
-    background: blue;
+    background: var(--main-blue);
 }
 
 /*welcome*/
@@ -73,30 +138,37 @@ img{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    background-color: black;
-
+    height: 60vh;/*view h*/
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
 }
 
 .welcome-section > p{
     font-size: 3rem;
     font-weight: 200;
     font-style: italic;
-    color: red;
+    color: var(--main-red);
 }
 
 /*projects*/
 .projects-section{
     text-align: center;
     padding: 10rem 2rem;
-    background: blue;
+    background: var(--main-blue);
 }
 
 .projects-header{
     max-width: 640px;
     margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid white;
+    border-bottom: 0.2rem solid var(--main-white);
 }
+
+/**device**/
+@media(max-width: 28.75em){
+    .projects-header{
+        font-size: 4rem;
+    }
+}
+
 .projects-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -104,22 +176,32 @@ img{
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    margin-bottom: 6rem;
+}
+
+/*device*/
+@media (max-width: 30.625em) {
+    .projects-section{
+        padding: 6rem 1rem;
+    }
+
+    .projects-grid{
+        grid-template-columns: 1fr;
+    }
 }
 
 .project{
-    background: gray;
+    background: var(--main-gray);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
 }
 
 .info{
-    color: gray;
+    color: var(--main-gray);
     transition: color 0.3s ease-out;
 }
 
 .project:hover .info{
-    color: orangered;
+    color: orange;
 }
 
 .project-image{
@@ -141,12 +223,12 @@ img{
 
 .btn-show-all {
     font-size: 2rem;
-    background: gray;
+    background: var(--main-gray);
     transition: background 0.3s ease-out;
 }
 
 .btn-show-all:hover {
-    background: red;
+    background: var(--main-red);
 }
 
 .btn-show-all:hover > i {
@@ -169,11 +251,18 @@ img{
     width: 100%;
     height: 80vh;
     padding: 0 2rem;
-    background: gray;
+    background: var(--main-gray);
 }
 
 .contact-section-header > h2{
     font-size: 6rem;
+}
+
+/*device*/
+@media(max-width: 28.75em){
+    .contact-section-header > h2{
+        font-size: 4rem;
+    }
 }
 
 .contact-section-header > p {
@@ -205,8 +294,8 @@ footer{
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  background: gray;
-  border-top: 4px solid red;
+  background: var(--main-gray);
+  border-top: 4px solid var(--main-red);
 }
 
 footer > p {
@@ -215,4 +304,12 @@ footer > p {
 
 footer i {
     vertical-align: middle;
+}
+
+/*device*/
+@media (max-width: 28.75em) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
 }
