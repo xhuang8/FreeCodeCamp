@@ -1,0 +1,3 @@
+{
+  "index.js": "const HIGH_TEMPERATURES = {\n  yesterday: 75,\n  today: 77,\n  tomorrow: 80\n};\n\n// change code below this line\n\nconst {today, tomorrow} = HIGH_TEMPERATURES;\n \n\n// change code above this line\n\nconsole.log(yesterday) // should be not defined\nconsole.log(today); // should be 77\nconsole.log(tomorrow); // should be 80\n"
+}

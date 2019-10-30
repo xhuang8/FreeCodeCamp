@@ -1,0 +1,3 @@
+{
+  "index.html": "<html>\n  <body>\n    <!-- add your code below -->\n<script type=\"module\" src=\"index.js\"></script>\n\n    <!-- add your code above -->\n  </body>\n</html>\n"
+}

@@ -1,0 +1,3 @@
+{
+  "index.js": "const makeServerRequest = new Promise((resolve, reject) => {\n  // responseFromServer is set to false to represent an unsuccessful response from a server\n  let responseFromServer = false;\n    \n  if(responseFromServer) {\n    resolve(\"We got the data\");\n  } else {  \n    reject(\"Data not received\");\n  }\n});\n\nmakeServerRequest.then(result => {\n  console.log(result);\n});\n\nmakeServerRequest.catch(error => {\n  console.log(error);\n});\n"
+}
