@@ -1,0 +1,3 @@
+{
+  "index.js": "// Open your browser console.\nlet output = \"Get this to log once in the browser console and twice in the freeCodeCamp console\";\n// Use console.clear() on the next line to clear the browser console.\nconsole.clear();\n\n// Use console.log() to print the output variable.\nconsole.log(output);\n\n// Check the two consoles to see the difference. The freeCodeCamp console should have printed the variable twice, once for each test of this challenge. The browser console should only print the variable once because you cleared it first.\n"
+}
