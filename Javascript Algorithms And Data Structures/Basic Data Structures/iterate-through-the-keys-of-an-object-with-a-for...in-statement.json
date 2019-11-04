@@ -1,0 +1,3 @@
+{
+  "index.js": "function countOnline(usersObj) {\n  // change code below this line\n  let count = 0;\n  for(let user in usersObj){\n    console.log(user);\n    if(usersObj[user].online == true){\n      count ++;\n    }\n  }\n  return count;\n  // change code above this line\n}\n"
+}
