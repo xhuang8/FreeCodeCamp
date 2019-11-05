@@ -1,0 +1,3 @@
+{
+  "index.js": "let dog = {\n    name: \"dollar\",\n    numLegs: 4\n};\n"
+}

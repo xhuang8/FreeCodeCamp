@@ -1,0 +1,3 @@
+{
+  "index.js": "function factorialize(num) {\n  if(num === 0 || num === 1){\n    return 1;\n  }\n  for(var sum = 1; num > 0; num--){\n     sum *= num;\n  }\n  return sum;\n}\n\nfactorialize(5);\n"
+}
