@@ -1,0 +1,11 @@
+// write your code here
+const JSX = (
+<div>
+  <h1>There are some animals</h1>
+  <p>animals</p>
+  <ul>
+    <li>cat</li>
+    <li>dog</li>
+    <li>rabbit</li>
+  </ul>
+</div>);
