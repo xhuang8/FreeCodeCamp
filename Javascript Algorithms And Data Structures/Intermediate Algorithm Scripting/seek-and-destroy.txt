@@ -1,0 +1,12 @@
+function destroyer(arr) {
+  arr = Array.from(arguments);
+  let firstArr = arr[0];
+  let args = arr.slice(1);
+  let res = firstArr.filter(function(e) {
+       return this.indexOf(e) < 0;
+    }, args
+    );
+  return res;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);

@@ -1,0 +1,24 @@
+function smallestCommons(arr) {
+  let max = Math.max(...arr);
+  let min = Math.min(...arr);
+  var number = 1;
+
+  while(true){
+
+    for(var i = min; i <= max; i++){
+      if(number % i != 0){
+        break;
+      }
+      if(i === max){
+        return number;
+      }
+    }
+
+    number++;
+  }
+
+}
+
+
+
+smallestCommons([1,5]);

@@ -1,0 +1,24 @@
+function pairElement(str) {
+  var newStr = str.split('');
+  var encapsulateArr =[];
+  for(var i = 0; i < newStr.length; i++){
+    var insideArr = [];
+    insideArr.push(str[i]);
+    encapsulateArr.push(insideArr);
+  }
+  for(var j =0; j < encapsulateArr.length; j++){
+    if(encapsulateArr[j][0]==="G"){
+      encapsulateArr[j].push("C");
+    } else if(encapsulateArr[j][0]==="C"){
+      encapsulateArr[j].push("G");
+    } else if(encapsulateArr[j][0]==="A"){
+      encapsulateArr[j].push("T");
+    } else if(encapsulateArr[j][0]==="T"){
+      encapsulateArr[j].push("A");
+    } else encapsulateArr;
+  }
+
+  return encapsulateArr;  
+}
+
+pairElement("GCG");
