@@ -1,0 +1,20 @@
+function palindrome(str) {
+  if(str.length == 0 || str == null){
+    return false;
+  }
+
+  var string = str.toLowerCase().split(/[^A-Za-z0-9]/gi).join('');
+  //change all the string to lower case, and split the string with comma, then join together
+
+  var res = string.split('');
+
+  if(res.join('') === res.reverse().join('')){
+    return true;
+  }
+
+  return false;
+}
+
+
+
+palindrome("eye");

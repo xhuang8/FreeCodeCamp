@@ -1,0 +1,37 @@
+function rot13(str) {
+  let alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","!",".","?"," "]
+
+  var strToArr = str.split(""); // string to array
+  var decodeValInx= [];
+  var decodeStrArr = [];
+
+  for(var i = 0; i < strToArr.length; i++){
+    let indexOfValue = alphabet.indexOf(strToArr[i]);
+
+    if(indexOfValue >= 26){
+      decodeValInx.push(strToArr[i]);
+    }
+    else if(indexOfValue >= 13){
+      let thirteenFormIndex = indexOfValue - 13;
+      decodeValInx.push(thirteenFormIndex);
+    }
+    else {
+      let addThirteenVal = indexOfValue + 13;
+      decodeValInx.push(addThirteenVal);
+    }
+  }
+  console.log(decodeValInx)
+  for(var i = 0; i < decodeValInx.length; i++){
+    if(decodeValInx[i] == "!" || decodeValInx[i] ==  "?" || decodeValInx[i] == "." || decodeValInx[i] === " "){
+      decodeStrArr.push(decodeValInx[i])
+    }
+    else{
+      decodeStrArr.push(alphabet[decodeValInx[i]]);
+    }
+  }
+  let decodeWord = decodeStrArr.join("");
+  console.log(decodeWord);
+  return decodeWord;
+}
+
+rot13("SERR PBQR PNZC");
